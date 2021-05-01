@@ -4,7 +4,7 @@ import ReactGol from 'react-gol'
 function App() {
   return (
     <div className="App">
-      <ReactGol />
+      <ReactGol cellSize={4} motionBlur={0} fillStyle={'red'} />
     </div>
   );
 }

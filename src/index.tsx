@@ -14,11 +14,11 @@ const gol = (props:golProps) => {
     const canvasRef = React.useRef<HTMLCanvasElement>(document.createElement("canvas"))
 
     const config = {
-        cellSize: props.cellSize || 12,
-        minFrameTime: props.minFrameTime || 100,
-        fillStyle: props.fillStyle ||'#EEEEEE',
-        motionBlur: props.motionBlur || 50,
-        initialCoverage: props.initialCoverage || .125
+        cellSize: props.cellSize ?? 12,
+        minFrameTime: props.minFrameTime ?? 100,
+        fillStyle: props.fillStyle ??'#EEEEEE',
+        motionBlur: props.motionBlur ?? .2,
+        initialCoverage: props.initialCoverage ?? .125
     }
 
 
@@ -99,7 +99,7 @@ const gol = (props:golProps) => {
                     if (!config.motionBlur) {
                         imageData.data[i] = 0
                     } else {
-                        imageData.data[i] -= config.motionBlur
+                        imageData.data[i] -= (config.motionBlur * 255)
                     }
 
                 }
