@@ -11,7 +11,7 @@ interface golProps {
 
 const gol = (props:golProps) => {
 
-    const canvasRef = React.useRef<HTMLCanvasElement>(document.createElement("canvas"))
+    const canvasRef = React.useRef(null)
 
     const config = {
         cellSize: props.cellSize ?? 12,
@@ -25,7 +25,6 @@ const gol = (props:golProps) => {
     React.useEffect(() => {
         const canvas = canvasRef.current
         const context = canvas.getContext('2d')
-        if (!context) return
 
         canvas.width = canvas.getBoundingClientRect().width;
         canvas.height = canvas.getBoundingClientRect().height;
