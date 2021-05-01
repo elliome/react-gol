@@ -1,6 +1,6 @@
 # Game of Life component for react
 
-A simple React component adds [Conway's Game of Life](https://www.google.com/search?client=safari&rls=en&q=conway%27s+game+of+life&ie=UTF-8&oe=UTF-8).
+A simple React component adds [Conway's Game of Life](https://www.google.com/search?client=safari&rls=en&q=conway%27s+game+of+life&ie=UTF-8&oe=UTF-8) to your website.
 
 ## Usage
 
