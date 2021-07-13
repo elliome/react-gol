@@ -15,9 +15,6 @@ export default {
             strict: true,
         },
     ],
-    treeshake: {
-        moduleSideEffects: false,
-    },
     plugins: [sass({ insert: true }), typescript(), uglify()],
     external: ["react", "react-dom"],
 };
