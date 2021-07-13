@@ -13,6 +13,7 @@ const gol = (props: golProps) => {
     const canvasRef = React.useRef(null);
     const [timestamp, setTimestamp] = React.useState(Date.now());
     const [style, setStyle] = React.useState<React.CSSProperties>({});
+    const [firstChange, setFirstChange] = React.useState(true);
 
     let resetTimer: number;
 
@@ -38,6 +39,15 @@ const gol = (props: golProps) => {
             setStyle({ opacity: 1 });
         }, 500);
     };
+
+    React.useEffect(() => {
+        if (!firstChange) {
+            console.log(props);
+            reset();
+        } else {
+            setFirstChange(false);
+        }
+    }, [props]);
 
     React.useEffect(() => {
         window.addEventListener("resize", handleResize);
