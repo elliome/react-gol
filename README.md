@@ -2,11 +2,17 @@
 
 A simple React component adds [Conway's Game of Life](https://www.google.com/search?client=safari&rls=en&q=conway%27s+game+of+life&ie=UTF-8&oe=UTF-8) to your website.
 
+## Installation
+Install `react-gol` from [NPM](https://www.npmjs.com/package/react-gol)
+```
+npm i react-gol
+```
+
 ## Usage
 
 Import `ReactGol` and add it to your project like so
 
-```
+```js
 import ReactGol from 'react-gol'
 
 function App() {
@@ -21,18 +27,18 @@ function App() {
 
 Avaliable props
 
-```
-    cellSize: number (default: 12);
-    minFrameTime: number (default: 100);
-    fillStyle: string (default: '#EEEEEE');
-    motionBlur: number (default: 50);
-    initialCoverage: number (default: .125);
+```js
+    cellSize: Number        // (default: 12);
+    minFrameTime: Number    // (default: 100);
+    fillStyle: String       // (default: '#EEEEEE');
+    motionBlur: Number      // (default: 50);
+    initialCoverage: Number // (default: .125);
 ```
 
 
 To customise this component, pass in props like so
 
-```
+```js
 import ReactGol from 'react-gol'
 
 function App() {
